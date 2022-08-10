@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gorjeta" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="#FFFEFE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputRecebeValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FDFDFD"
+            android:hint="Valor da compra"
+            android:inputType="number|numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <SeekBar
+        android:id="@+id/seekBarRecebePorcentagem"
+        android:layout_width="290dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:max="100"
+        android:progress="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvExibePorcentagem"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tvExibePorcentagem"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="10%"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekBarRecebePorcentagem" />
+
+    <TextView
+        android:id="@+id/tvEtiquetaGorjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Gorjeta"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvExibeValorGorjeta"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEtiquetaTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvExibeValorTotal"
+        app:layout_constraintStart_toStartOf="@+id/tvEtiquetaGorjeta" />
+
+    <TextView
+        android:id="@+id/tvExibeValorGorjeta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/laranjafraco"
+        android:paddingLeft="10dp"
+        android:text="R$: "
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarRecebePorcentagem"
+        app:layout_constraintStart_toEndOf="@+id/tvEtiquetaGorjeta"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarRecebePorcentagem" />
+
+    <TextView
+        android:id="@+id/tvExibeValorTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/laranjafraco"
+        android:paddingLeft="10dp"
+        android:text="R$: "
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarRecebePorcentagem"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvEtiquetaGorjeta"
+        app:layout_constraintTop_toBottomOf="@+id/tvExibeValorGorjeta" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Arraste para selecionar  a gorjeta"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarRecebePorcentagem"
+        app:layout_constraintStart_toStartOf="@+id/seekBarRecebePorcentagem"
+        app:layout_constraintTop_toBottomOf="@+id/tvExibeErro" />
+
+    <TextView
+        android:id="@+id/tvExibeErro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#F80000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
