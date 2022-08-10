@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             tv.setText("Insira um valor para continuar");
             tv.setBackgroundResource(R.color.laranjaForte);
             tv.setPadding(20,5,20,5);
-            
+
             Toast mensagem = new Toast(getApplicationContext());
             mensagem.setView(tv);
             mensagem.show();
