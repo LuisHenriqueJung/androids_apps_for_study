@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
    private TextView tvRecebeValor;
     private TextView tvExibePorcentagem;
     private TextView tvExibeGorjete;
     private TextView tvExibeTotal;
-    private TextView tvExibeExeption;
    private SeekBar sbRecebePorcentagem;
 
    private int recebePorcentagem = 0;
@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         tvExibePorcentagem = findViewById(R.id.tvExibePorcentagem);
         tvExibeGorjete = findViewById(R.id.tvExibeValorGorjeta);
         tvExibeTotal = findViewById(R.id.tvExibeValorTotal);
-        tvExibeExeption = findViewById(R.id.tvExibeErro);
 
         sbRecebePorcentagem = findViewById(R.id.seekBarRecebePorcentagem);
 
@@ -66,9 +65,13 @@ public class MainActivity extends AppCompatActivity {
         tvExibePorcentagem.setText(recebePorcentagem + "%");
         try {
             recebeValor =Double.parseDouble(tvRecebeValor.getText().toString());
-            tvExibeExeption.setText("");
         }catch(Exception e){
-            tvExibeExeption.setText("Digite o valor da compra para continuar!");
+            Toast.makeText(
+                    getApplicationContext(),
+                    "Insira o valor da compra para continuar!",
+                    Toast.LENGTH_LONG
+            ).show();
+
         }
 
         valorGorjeta = recebeValor * recebePorcentagem /100;

@@ -121,16 +121,6 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/seekBarRecebePorcentagem"
         app:layout_constraintStart_toStartOf="@+id/seekBarRecebePorcentagem"
-        app:layout_constraintTop_toBottomOf="@+id/tvExibeErro" />
-
-    <TextView
-        android:id="@+id/tvExibeErro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#F80000"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
