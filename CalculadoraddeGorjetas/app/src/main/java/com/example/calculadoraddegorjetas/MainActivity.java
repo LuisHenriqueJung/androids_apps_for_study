@@ -8,6 +8,8 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
    private TextView tvRecebeValor;
     private TextView tvExibePorcentagem;
@@ -66,11 +68,20 @@ public class MainActivity extends AppCompatActivity {
         try {
             recebeValor =Double.parseDouble(tvRecebeValor.getText().toString());
         }catch(Exception e){
-            Toast.makeText(
+            /*Toast.makeText(
                     getApplicationContext(),
                     "Insira o valor da compra para continuar!",
                     Toast.LENGTH_LONG
             ).show();
+             */
+            TextView tv = new TextView(getApplicationContext());
+            tv.setText("Insira um valor para continuar");
+            tv.setBackgroundResource(R.color.laranjaForte);
+            tv.setPadding(20,5,20,5);
+            
+            Toast mensagem = new Toast(getApplicationContext());
+            mensagem.setView(tv);
+            mensagem.show();
 
         }
 
