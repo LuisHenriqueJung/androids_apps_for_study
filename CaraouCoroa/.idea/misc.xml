@@ -3,9 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/luis.jung/AndroidStudioProjects/CardView/app/src/main/res/layout/activity_main.xml" value="0.16799999999999998" />
-        <entry key="..\:/Users/luis.jung/AndroidStudioProjects/CardView/app/src/main/res/layout/activity_segunda_tela.xml" value="0.25" />
-        <entry key="..\:/Users/luis.jung/AndroidStudioProjects/CardView/app/src/main/res/layout/postagem_detalhe.xml" value="0.2" />
+        <entry key="..\:/Users/luis.jung/AndroidStudioProjects/CaraouCoroa/app/src/main/res/layout/activity_jogo.xml" value="0.25" />
+        <entry key="..\:/Users/luis.jung/AndroidStudioProjects/CaraouCoroa/app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
   </component>
